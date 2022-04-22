@@ -20,8 +20,8 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public void createBookOrder(BookOrderDto bookOrder) {
-		BookOrder book = new BookOrder();
+	public void createBookOrder(BookOrderDto bookOrderDto) {
+		BookOrder book = new BookOrder(bookOrderDto.getIsbn(), bookOrderDto.getQuantity());
 		bookRepository.save(book);
 	}
 

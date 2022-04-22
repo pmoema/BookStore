@@ -27,6 +27,15 @@ public class BookOrder {
 	
 	@Column(name="quantity")
 	private int quantity;
+	
+	public BookOrder() {
+	}
+
+	public BookOrder(String isbn, int quantity) {
+		super();
+		this.isbn = isbn;
+		this.quantity = quantity;
+	}
 
 	public Long getId() {
 		return id;
